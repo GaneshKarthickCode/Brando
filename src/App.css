@@ -1,0 +1,168 @@
+/* App.css */
+
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-logo img {
+  height: 60px; /* Reduce height for mobile view */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Align items vertically */
+}
+
+.navbar-menu li {
+  position: relative;
+  display: inline;
+}
+
+.navbar-menu li a,
+.dropdown-toggle {
+  text-decoration: none;
+  color: #e4e2dd;
+  cursor: pointer;
+  padding: 12px 15px; /* Adjust padding for mobile view */
+  font-size: 14px; /* Adjust font size for mobile view */
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #e4e2dd;
+  font-size: 14px; /* Adjust font size for mobile view */
+}
+
+/* General button styles */
+.getintouch {
+  background-color: #555;
+  color: #000000; /* Black text color */
+  padding: 12px 20px; /* Adjust padding for mobile view */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px; /* Adjust font size for mobile view */
+  cursor: pointer;
+  border: none; /* Remove border */
+  border-radius: 20px; /* Add border radius for curve */
+}
+
+.getintouch:hover {
+  background-color: #777; /* Adjust hover background color as needed */
+  color: #000000; /* Black text color on hover */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.5rem 7%;
+  }
+
+  .navbar-logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem; /* Adjust margin for spacing */
+  }
+
+  .navbar-logo img {
+      height: 50px; /* Adjust height for mobile view */
+  }
+
+  .navbar-menu {
+      flex-direction: column;
+      width: 100%;
+      display: none; /* Initially hide the menu */
+      background-color: #333; /* Add background color for mobile menu */
+      position: absolute;
+      top: 100%; /* Position below navbar */
+      left: 0;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      padding: 1rem; /* Adjust padding for mobile menu */
+  }
+
+  .navbar-menu.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-menu li {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0.5rem; /* Adjust margin for spacing */
+  }
+
+  .navbar-menu li a,
+  .dropdown-toggle {
+      padding: 10px; /* Adjust padding for mobile view */
+  }
+
+  .dropdown-content {
+      position: relative;
+      box-shadow: none;
+  }
+}
+
+/* Navbar toggle button for mobile */
+.navbar-toggle {
+  display: none;
+  background-color: #333;
+  color: #e4e2dd;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+      display: block;
+  }
+}
