@@ -1,4 +1,5 @@
 :root {
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,6 +12,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* If in case want to remove gap between the carousals*/
+
+.scrollable-sections > video {
+  margin: 0;              /* Remove any margins */
+  padding: 0;             /* Remove any paddings */
+  width: 100%;            /* Ensure video takes full width */
+  display: block;         /* Ensure no inline spacing issues */
 }
 
 a {
