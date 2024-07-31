@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="banner-carousel">
             <Carousel
                 className="small-carousel"
-                interval={5000}
+                interval={3000}
                 showThumbs={false}
                 autoPlay={true}
                 showStatus={false}

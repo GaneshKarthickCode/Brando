@@ -20,7 +20,7 @@ const Home = () => {
                 <Navbar />
                 <Carousel
                     className="carousel"
-                    interval={3000}
+                    interval={53000}
                     showThumbs={false}
                     autoPlay={true}
                     showStatus={false}
@@ -60,8 +60,8 @@ const Home = () => {
                 <div id="printing-section"><Printing /></div>
                 <div id="software-section"><Software /></div>
                 <div id="about-section"><About /></div>
-                <div id="contact-section"><Contact /></div>
                 <div id="getintouch-section"><GetInTouch /></div>
+                <div id="contact-section"><Contact /></div>
             </div>
             <ScrollToTop />
         </>
